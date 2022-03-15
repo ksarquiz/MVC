@@ -36,6 +36,8 @@ const controller = {
 
 	// Create -  Method to store
 	store: (req, res) => {
+
+
 		let newProduct = {
 			id: products.length +1,
 			name: req.body.name,
@@ -63,6 +65,7 @@ const controller = {
 		res.render("product-edit-form",{product:productToEdit})
 		// Do the magic
 	},
+	
 	// Update - Method to update
 	update: (req, res) => {
 		let productToEdit = products.find(function (product) {
